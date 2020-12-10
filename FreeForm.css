@@ -1,0 +1,158 @@
+/* --------- Text ------------- */
+
+span.sheet-bold{
+  font-weight: 800;
+  font-size: medium;
+}
+
+label {
+  margin: 5px 0px 5px 0px;
+  font-size: 1.1em;
+}
+
+/* --------- Inputs ------------- */
+
+input[type="text"] {
+  background-color: transparent;
+  border-style: none none solid none;
+  border-color: black;
+}
+
+input[type="number"] {
+  background-color: transparent;
+  border: none;
+}
+
+textarea {
+  background-color: transparent;
+  width: 89%;
+  height: 70%;
+  margin-right: 15px;
+}
+
+input[type="checkbox"].sheet-checkbox {
+  border-style: solid black;
+  border-radius: 0px;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="number"]:focus{
+  background-color: #F6CED8;
+}
+
+/* --------- General Section Styling ------------- */
+.sheet-flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.sheet-flex-middle {
+  display: flex;
+  justify-content: center;
+}
+
+.sheet-flex-down {
+  flex-flow: column nowrap;
+}
+
+.sheet-section {
+    padding: 5px;
+    min-height: 90%;
+}
+
+
+/*  ----- Sheet Structure ------- */
+
+div.sheet-main{
+	display:grid;
+	grid-template-columns: 140px 140px 290px 230px;
+	grid-template-rows: 100px	100px	100px;
+	grid-template-areas:"logo	logo	name	lvl"
+						"logo	logo	hp		sta"
+						"logo	logo	ac		quirk";
+	grid-gap: 6px;
+	width:		850px;
+	height:		900px;
+	background-image: url(https://github.com/Roll20/roll20-character-sheets/blob/master/Feast_of_Legends/images/FoLborder.jpg?raw=true);
+	background-size: 850px 900px;
+	background-repeat: no-repeat;
+}
+/* LOGO SECTION */
+
+div.sheet-logo{
+  grid-area: logo;
+  background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FF-Logo.png?raw=true);
+  background-size: 250px 250px;
+  background-repeat: no-repeat;
+  margin-left: 20px;
+  margin-top: 15px;
+  display: flex;
+  justify-content:flex-end;
+  align-items:flex-end;
+  flex-flow: column;
+}
+div.sheet-logo span{
+  font-size: 15px;
+  background-color: white;
+  border: 2px solid black; 
+}
+
+/* NAME SECTION */
+
+div.sheet-name{
+  grid-area: name;
+  padding-top: 35px;
+}
+
+div.sheet-name div.sheet-section-small{
+  background-image: url(https://github.com/Roll20/roll20-character-sheets/blob/master/Feast_of_Legends/images/FoLblock1.jpg?raw=true);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 290px;
+}
+
+div.sheet-name label{
+  width: 50px;
+  padding-left: 15px;
+}
+
+div.sheet-name input{
+  width: 180px;
+}
+
+/* LVL SECTION */
+
+div.sheet-lvl{
+  grid-area: lvl;
+  padding-top: 35px;
+}
+
+div.sheet-lvl div.sheet-section-small{
+  background-image: url(https://github.com/Roll20/roll20-character-sheets/blob/master/Feast_of_Legends/images/FoLblock1.jpg?raw=true);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 290px;
+}
+
+div.sheet-lvl label{
+  width: 50px;
+  padding-left: 15px;
+}
+
+div.sheet-lvl input{
+  width: 180px;
+}
+
+
+
+
+
+
+
+
+
+
+
