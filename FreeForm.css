@@ -61,13 +61,26 @@ input[type="number"]:focus{
     min-height: 90%;
 }
 
+/* -----Hides up/down buttons on numberfields that don't need them ---*/
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 /*  ----- Sheet Structure ------- */
 
 div.sheet-main{
 	display:grid;
 	grid-template-columns: 140px 140px 290px 230px;
-	grid-template-rows: 100px	100px	100px;
+	grid-template-rows: 50px	100px	100px;
 	grid-template-areas:"logo	logo	name	lvl"
 						"logo	logo	hp		sta"
 						"logo	logo	ac		quirk";
@@ -147,9 +160,53 @@ div.sheet-lvl input{
 }
 
 
+/* HP SECTION */
 
+div.sheet-hp{
+  grid-area: hp;
+  padding-top: 35px;
+}
 
+div.sheet-hp div.sheet-section-small{
+  background-image: url(https://github.com/Roll20/roll20-character-sheets/blob/master/Feast_of_Legends/images/FoLblock1.jpg?raw=true);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 290px;
+}
 
+div.sheet-hp label{
+  width: 20px;
+  padding-left: 15px;
+}
+
+div.sheet-hp input{
+  width: 180px;
+}
+
+/* STA SECTION */
+
+div.sheet-sta{
+  grid-area: sta;
+  padding-top: 35px;
+}
+
+div.sheet-sta div.sheet-section-small{
+  background-image: url(https://github.com/Roll20/roll20-character-sheets/blob/master/Feast_of_Legends/images/FoLblock1.jpg?raw=true);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 290px;
+}
+
+div.sheet-sta label{
+  width: 20px;
+  padding-left: 15px;
+}
+
+div.sheet-sat input{
+  width: 180px;
+}
 
 
 
