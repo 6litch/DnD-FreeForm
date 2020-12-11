@@ -80,10 +80,11 @@ input[type=number] {
 div.sheet-main{
 	display:grid;
 	grid-template-columns: 140px 140px 290px 230px;
-	grid-template-rows: 50px	100px	100px;
+	grid-template-rows: 50px	50px	50px	100px;
 	grid-template-areas:"logo	logo	name	lvl"
 						"logo	logo	hp		sta"
-						"logo	logo	ac		quirk";
+						"logo	logo	ac		ac"
+						"logo	logo	quirk	quirk";
 	grid-gap: 6px;
 	width:		850px;
 	height:		900px;
@@ -208,8 +209,53 @@ div.sheet-sat input{
   width: 180px;
 }
 
+/* AC SECTION */
 
+div.sheet-ac{
+  grid-area: ac;
+  padding-top: 35px;
+}
 
+div.sheet-ac div.sheet-section-small{
+  background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/BoxThree.jpg?raw=true);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 290px;
+}
+
+div.sheet-ac label{
+  width: 40px;
+  padding-left: 15px;
+}
+
+div.sheet-ac input{
+  width: 180px;
+}
+
+/* QUIRK SECTION */
+
+div.sheet-quirk{
+  grid-area: quirk;
+  padding-top: 35px;
+}
+
+div.sheet-quirk div.sheet-section-small{
+  background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/BoxOne.jpg?raw=true);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 290px;
+}
+
+div.sheet-quirk label{
+  width: 50px;
+  padding-left: 15px;
+}
+
+div.sheet-quirk input{
+  width: 180px;
+}
 
 
 
