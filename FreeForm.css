@@ -49,6 +49,19 @@ input[type="number"]:focus{
   background-color: #F6CED8;
 }
 
+/* ------- Buttons ---------- */
+
+button[type="roll"]:not(.sheet-small){
+  color: black;
+  height: 30px;
+  width: 30px;
+  margin-left: 15px;
+}
+
+button[type="roll"]:not(.sheet-small)::before{
+  font-size: 1.4em;
+}
+
 /* --------- General Section Styling ------------- */
 .sheet-flex-center {
   display: flex;
@@ -272,7 +285,7 @@ div.sheet-quirk input{
 div.sheet-buttons{
   grid-area: buttons;
   padding-top: 35px;
-  padding-left: 30px;
+  padding-left: 115px;
 }
 
 div.sheet-buttons div.sheet-section-small{
@@ -293,11 +306,30 @@ div.sheet-buttons input{
   width: 180px;
 }
 
+.sheet-charButton,
+.sheet-abiButton,
+.sheet-invButton,
+.sheet-noteButton,
+.sheet-settingsButton{
+	background-color: initial;
+	color: initial;
+}
+
+.sheet-tabstoggle[value="character"] ~ button.sheet-charButton,
+.sheet-tabstoggle[value="note"] ~ button.sheet-noteButton,
+.sheet-tabstoggle[value="inventory"] ~ button.sheet-invButton,
+.sheet-tabstoggle[value="abi"] ~ button.sheet-abiButton,
+.sheet-tabstoggle[value="settings"] ~ button.sheet-settingsButton{
+	background-color: #ff0000;
+	color: #ffffff;
+}
+
 /* BUTTONS BACKGROUND SECTION */
 
 div.sheet-bbackground{
   grid-area: buttons;
   padding-top: 35px;
+  padding-left: 30px;
 }
 
 div.sheet-bbackground div.sheet-section-small{
@@ -305,8 +337,104 @@ div.sheet-bbackground div.sheet-section-small{
   background-size: contain;
   background-repeat: no-repeat;
   height: 50px;
-  width: 580px;
+  width: 600px;
 }
+
+/* TAB CONTROL */
+/*Configure the tab buttons*/
+.sheet-character,
+.sheet-inventory,
+.sheet-note,
+.sheet-abi,
+.sheet-settings{
+	display: none;
+}
+/* show the selected tab */
+.sheet-tabstoggle[value="character"] ~ div.sheet-character,
+.sheet-tabstoggle[value="note"] ~ div.sheet-note,
+.sheet-tabstoggle[value="inventory"] ~ div.sheet-inventory,
+.sheet-tabstoggle[value="abi"] ~ div.sheet-abi,
+.sheet-tabstoggle[value="settings"] ~ div.sheet-settings{
+	display: block;
+}
+
+/*--------------------------------*/
+/* ------ Stats Structure ------- */
+/*--------------------------------*/
+
+div.sheet-stats{
+	display:grid;
+	grid-template-columns: 300px 140px;
+	grid-template-rows: 100px	50px	50px	100px;
+	grid-template-areas:"melee		ranged"
+						"strength	consitution"
+						"Perception	Movement"
+						"Stealth	Finesse";
+	grid-gap: 6px;
+}
+
+/* MELEE SECTION */
+
+
+
+/* STRENGTH SECTION */
+
+div.sheet-strength{
+  grid-area: strength;
+  margin-left: 15px;
+}
+
+div.sheet-strength div.sheet-section-small{
+  background-image: url(https://github.com/Roll20/roll20-character-sheets/blob/master/Feast_of_Legends/images/FoLstatblock.jpg?raw=true);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 70px;
+  width: 600px;
+}
+
+div.sheet-strength label{
+	width: 104px;
+	margin-left: 15px;
+}
+
+div.sheet-strength input{
+	text-align: center;
+	width: 10px;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+div.sheet-strength span{
+	margin-left: 24px;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+div.sheet-strengthButton label{
+	margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

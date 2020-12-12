@@ -67,15 +67,76 @@
 			<button class="settingsButton" type="action" name="act_settings">☼</button>
 		</div>
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	<input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab"  value="character"  />
+	<div class="character">
+		<div class="stats">
+			<div class="strength">
+				<div class="section-small flex-center">
+					<label>Strength</label>
+					<input name="attr_strength" type="number" value="">
+					<span name="attr_strength_bonus">13</span>
+					<div class="strengthButton">
+						<label><button name="roll_strength" type="roll" value="&{template:default} {{name=Strength}} {{Result=[[d20+(@{strength_bonus})]]}}"></button></label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/worker">
+    //Tab Control
+    const buttonlist = ["character","note","abi","inventory","settings"];
+    buttonlist.forEach(button => {
+        on(`clicked:${button}`, function() {
+            setAttrs({
+                sheetTab: button
+            });
+        });
+    });
+</script>
