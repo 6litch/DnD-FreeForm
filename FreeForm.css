@@ -5,11 +5,19 @@ span.sheet-bold{
   font-size: medium;
 }
 
-label {
+div.sheet-main label {
   margin: 5px 0px 5px 0px;
   font-size: 1.1em;
 }
 
+div.sheet-settings label {
+  margin: 5px 0px 5px 0px;
+  font-size: .9em;
+}
+
+div.sheet-settings input {
+  font-size: .9em;
+}
 /* --------- Inputs ------------- */
 
 input[type="text"] {
@@ -75,7 +83,9 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-/*  ----- Sheet Structure ------- */
+/*--------------------------------*/
+/* ------ Main  Structure ------- */
+/*--------------------------------*/
 
 div.sheet-main{
 	display:grid;
@@ -83,12 +93,12 @@ div.sheet-main{
 	grid-template-rows: 50px	50px	50px	100px;
 	grid-template-areas:"logo	logo	name	lvl"
 						"logo	logo	hp		sta"
-						"logo	logo	ac		ac"
-						"logo	logo	quirk	quirk";
+						"logo	logo	quirk	ac"
+						"logo	logo	buttons	buttons";
 	grid-gap: 6px;
 	width:		850px;
 	height:		900px;
-	background-image: url(https://github.com/Roll20/roll20-character-sheets/blob/master/Feast_of_Legends/images/FoLborder.jpg?raw=true);
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/BoxBroader.jpg?raw=true);
 	background-size: 850px 900px;
 	background-repeat: no-repeat;
 }
@@ -256,6 +266,90 @@ div.sheet-quirk label{
 div.sheet-quirk input{
   width: 180px;
 }
+
+/* BUTTONS SECTION */
+
+div.sheet-buttons{
+  grid-area: buttons;
+  padding-top: 35px;
+  padding-left: 30px;
+}
+
+div.sheet-buttons div.sheet-section-small{
+  height: 50px;
+  width: 290px;
+}
+
+div.sheet-buttons label{
+  width: 50px;
+  padding-left: 15px;
+}
+
+div.sheet-buttons button{
+	border-radius: 30%;
+}
+
+div.sheet-buttons input{
+  width: 180px;
+}
+
+/* BUTTONS BACKGROUND SECTION */
+
+div.sheet-bbackground{
+  grid-area: buttons;
+  padding-top: 35px;
+}
+
+div.sheet-bbackground div.sheet-section-small{
+  background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/BoxOne.jpg?raw=true);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 290px;
+}
+
+
+
+
+
+
+
+
+/*--------------------------------*/
+/* ----- Setting Structure ------ */
+/*--------------------------------*/
+
+div.sheet-settings{
+	display:grid;
+	grid-template-columns: 140px 140px 290px 230px;
+	grid-template-rows: 50px	50px	50px	100px;
+	grid-template-areas:"";
+	grid-gap: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
