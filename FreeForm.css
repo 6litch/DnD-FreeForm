@@ -364,37 +364,140 @@ div.sheet-bbackground div.sheet-section-small{
 
 div.sheet-stats{
 	display:grid;
-	grid-template-columns: 300px 140px;
-	grid-template-rows: 100px	50px	50px	100px;
-	grid-template-areas:"melee		ranged"
-						"strength	consitution"
-						"Perception	Movement"
-						"Stealth	Finesse";
+	grid-template-columns: 260px 260px 80px;
+	grid-template-rows: 75px	75px	75px	75px;
+	grid-template-areas:"melee		ranged		initiative"
+						"strength	consitution	money"
+						"perception	movement	money"
+						"stealth	finesse		exslot"
+						"control	charm		exslot"
+						"terror		intellect	move"
+						"wit		tinkering	tol"
+						"income		wanted		renown";
 	grid-gap: 6px;
 }
 
 /* MELEE SECTION */
 
+div.sheet-melee{
+	grid-area: melee;
+	margin-left: 15px;
+}
+
+div.sheet-melee div.sheet-section-small{
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockMelee.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 600px;
+}
+
+div.sheet-melee label{
+	width: 50px;
+	font-size: 11px;
+}
+
+div.sheet-melee input{
+	text-align: center;
+	width: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 70px;
+}
+
+div.sheet-melee span{
+	margin-left: 24px;
+	font-size: 20px;
+	font-weight: 600;
+	width: 25px;
+}
+
+div.sheet-melee button{
+	font-size: 10px;
+	border: none;
+	background-color: inherit;
+	font-weight: 600;
+	background-image: none;
+}
+
+div.sheet-melee button[type=roll]::before{
+	display:none;
+}
+
+div.sheet-melee button:hover{
+	color: red;
+}
+
+/* RANGED SECTION */
+
+div.sheet-ranged{
+	grid-area: ranged;
+	margin-left: 15px;
+}
+
+div.sheet-ranged div.sheet-section-small{
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockRanged.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 600px;
+}
+
+div.sheet-ranged label{
+	width: 65px;
+	font-size: 11px;
+}
+
+div.sheet-ranged input{
+	text-align: center;
+	width: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 55px;
+}
+
+div.sheet-ranged span{
+	margin-left: 24px;
+	font-size: 20px;
+	font-weight: 600;
+	width: 25px;
+}
+
+div.sheet-ranged button{
+	font-size: 10px;
+	border: none;
+	background-color: inherit;
+	font-weight: 600;
+	background-image: none;
+}
+
+div.sheet-ranged button[type=roll]::before{
+	display:none;
+}
+
+div.sheet-ranged button:hover{
+	color: red;
+}
 
 
 /* STRENGTH SECTION */
 
 div.sheet-strength{
-  grid-area: strength;
-  margin-left: 15px;
+	grid-area: strength;
+	margin-left: 15px;
 }
 
 div.sheet-strength div.sheet-section-small{
-  background-image: url(https://github.com/Roll20/roll20-character-sheets/blob/master/Feast_of_Legends/images/FoLstatblock.jpg?raw=true);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 70px;
-  width: 600px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockStrength.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 600px;
 }
 
 div.sheet-strength label{
-	width: 104px;
-	margin-left: 15px;
+	width: 65px;
+	font-size: 11px;
 }
 
 div.sheet-strength input{
@@ -402,41 +505,643 @@ div.sheet-strength input{
 	width: 10px;
 	font-size: 20px;
 	font-weight: 600;
+	margin-left: 55px;
 }
 
 div.sheet-strength span{
 	margin-left: 24px;
 	font-size: 20px;
 	font-weight: 600;
+	width: 25px;
 }
 
-div.sheet-strengthButton label{
-	margin-left: 10px;
+div.sheet-strength button{
+	font-size: 10px;
+	border: none;
+	background-color: inherit;
+	font-weight: 600;
+	background-image: none;
 }
 
+div.sheet-strength button[type=roll]::before{
+	display:none;
+}
 
+div.sheet-strength button:hover{
+	color: red;
+}
 
+/* CONSITUTION SECTION */
 
+div.sheet-consitution{
+	grid-area: consitution;
+	margin-left: 15px;
+}
 
+div.sheet-consitution div.sheet-section-small{
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockConsitution.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 600px;
+}
 
+div.sheet-consitution label{
+	width: 65px;
+	font-size: 11px;
+}
 
+div.sheet-consitution input{
+	text-align: center;
+	width: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 55px;
+}
 
+div.sheet-consitution span{
+	margin-left: 24px;
+	font-size: 20px;
+	font-weight: 600;
+	width: 25px;
+}
 
+div.sheet-consitution button{
+	font-size: 10px;
+	border: none;
+	background-color: inherit;
+	font-weight: 600;
+	background-image: none;
+}
 
+div.sheet-consitution button[type=roll]::before{
+	display:none;
+}
 
+div.sheet-consitution button:hover{
+	color: red;
+}
 
+/* PERCEPTION SECTION */
 
+div.sheet-perception{
+	grid-area: perception;
+	margin-left: 15px;
+}
 
+div.sheet-perception div.sheet-section-small{
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockPerception.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 600px;
+}
 
+div.sheet-perception label{
+	width: 65px;
+	font-size: 11px;
+}
 
+div.sheet-perception input{
+	text-align: center;
+	width: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 55px;
+}
 
+div.sheet-perception span{
+	margin-left: 24px;
+	font-size: 20px;
+	font-weight: 600;
+	width: 25px;
+}
 
+div.sheet-perception button{
+	font-size: 10px;
+	border: none;
+	background-color: inherit;
+	font-weight: 600;
+	background-image: none;
+}
 
+div.sheet-perception button[type=roll]::before{
+	display:none;
+}
 
+div.sheet-perception button:hover{
+	color: red;
+}
 
+/* MOVEMENT SECTION */
 
+div.sheet-movement{
+	grid-area: movement;
+	margin-left: 15px;
+}
 
+div.sheet-movement div.sheet-section-small{
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockMovement.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 600px;
+}
 
+div.sheet-movement label{
+	width: 65px;
+	font-size: 11px;
+}
+
+div.sheet-movement input{
+	text-align: center;
+	width: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 55px;
+}
+
+div.sheet-movement span{
+	margin-left: 24px;
+	font-size: 20px;
+	font-weight: 600;
+	width: 25px;
+}
+
+div.sheet-movement button{
+	font-size: 10px;
+	border: none;
+	background-color: inherit;
+	font-weight: 600;
+	background-image: none;
+}
+
+div.sheet-movement button[type=roll]::before{
+	display:none;
+}
+
+div.sheet-movement button:hover{
+	color: red;
+}
+
+/* STEALTH SECTION */
+
+div.sheet-stealth{
+	grid-area: stealth;
+	margin-left: 15px;
+}
+
+div.sheet-stealth div.sheet-section-small{
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockStealth.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 600px;
+}
+
+div.sheet-stealth label{
+	width: 65px;
+	font-size: 11px;
+}
+
+div.sheet-stealth input{
+	text-align: center;
+	width: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 55px;
+}
+
+div.sheet-stealth span{
+	margin-left: 24px;
+	font-size: 20px;
+	font-weight: 600;
+	width: 25px;
+}
+
+div.sheet-stealth button{
+	font-size: 10px;
+	border: none;
+	background-color: inherit;
+	font-weight: 600;
+	background-image: none;
+}
+
+div.sheet-stealth button[type=roll]::before{
+	display:none;
+}
+
+div.sheet-stealth button:hover{
+	color: red;
+}
+
+/* FINESSE SECTION */
+
+div.sheet-finesse{
+	grid-area: finesse;
+	margin-left: 15px;
+}
+
+div.sheet-finesse div.sheet-section-small{
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockFinesse.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 600px;
+}
+
+div.sheet-finesse label{
+	width: 65px;
+	font-size: 11px;
+}
+
+div.sheet-finesse input{
+	text-align: center;
+	width: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 55px;
+}
+
+div.sheet-finesse span{
+	margin-left: 24px;
+	font-size: 20px;
+	font-weight: 600;
+	width: 25px;
+}
+
+div.sheet-finesse button{
+	font-size: 10px;
+	border: none;
+	background-color: inherit;
+	font-weight: 600;
+	background-image: none;
+}
+
+div.sheet-finesse button[type=roll]::before{
+	display:none;
+}
+
+div.sheet-finesse button:hover{
+	color: red;
+}
+
+/* CONTROL SECTION */
+
+div.sheet-control{
+	grid-area: control;
+	margin-left: 15px;
+}
+
+div.sheet-control div.sheet-section-small{
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockControl.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 600px;
+}
+
+div.sheet-control label{
+	width: 65px;
+	font-size: 11px;
+}
+
+div.sheet-control input{
+	text-align: center;
+	width: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 55px;
+}
+
+div.sheet-control span{
+	margin-left: 24px;
+	font-size: 20px;
+	font-weight: 600;
+	width: 25px;
+}
+
+div.sheet-control button{
+	font-size: 10px;
+	border: none;
+	background-color: inherit;
+	font-weight: 600;
+	background-image: none;
+}
+
+div.sheet-control button[type=roll]::before{
+	display:none;
+}
+
+div.sheet-control button:hover{
+	color: red;
+}
+
+/* CHARM SECTION */
+
+div.sheet-charm{
+	grid-area: charm;
+	margin-left: 15px;
+}
+
+div.sheet-charm div.sheet-section-small{
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockCharm.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 600px;
+}
+
+div.sheet-charm label{
+	width: 65px;
+	font-size: 11px;
+}
+
+div.sheet-charm input{
+	text-align: center;
+	width: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 55px;
+}
+
+div.sheet-charm span{
+	margin-left: 24px;
+	font-size: 20px;
+	font-weight: 600;
+	width: 25px;
+}
+
+div.sheet-charm button{
+	font-size: 10px;
+	border: none;
+	background-color: inherit;
+	font-weight: 600;
+	background-image: none;
+}
+
+div.sheet-charm button[type=roll]::before{
+	display:none;
+}
+
+div.sheet-charm button:hover{
+	color: red;
+}
+
+/* TERROR SECTION */
+
+div.sheet-terror{
+	grid-area: terror;
+	margin-left: 15px;
+}
+
+div.sheet-terror div.sheet-section-small{
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockTerror.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 600px;
+}
+
+div.sheet-terror label{
+	width: 65px;
+	font-size: 11px;
+}
+
+div.sheet-terror input{
+	text-align: center;
+	width: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 55px;
+}
+
+div.sheet-terror span{
+	margin-left: 24px;
+	font-size: 20px;
+	font-weight: 600;
+	width: 25px;
+}
+
+div.sheet-terror button{
+	font-size: 10px;
+	border: none;
+	background-color: inherit;
+	font-weight: 600;
+	background-image: none;
+}
+
+div.sheet-terror button[type=roll]::before{
+	display:none;
+}
+
+div.sheet-terror button:hover{
+	color: red;
+}
+
+/* INTELLECT SECTION */
+
+div.sheet-intellect{
+	grid-area: intellect;
+	margin-left: 15px;
+}
+
+div.sheet-intellect div.sheet-section-small{
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockIntellect.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 600px;
+}
+
+div.sheet-intellect label{
+	width: 65px;
+	font-size: 11px;
+}
+
+div.sheet-intellect input{
+	text-align: center;
+	width: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 55px;
+}
+
+div.sheet-intellect span{
+	margin-left: 24px;
+	font-size: 20px;
+	font-weight: 600;
+	width: 25px;
+}
+
+div.sheet-intellect button{
+	font-size: 10px;
+	border: none;
+	background-color: inherit;
+	font-weight: 600;
+	background-image: none;
+}
+
+div.sheet-intellect button[type=roll]::before{
+	display:none;
+}
+
+div.sheet-intellect button:hover{
+	color: red;
+}
+
+/* WIT SECTION */
+
+div.sheet-wit{
+	grid-area: wit;
+	margin-left: 15px;
+}
+
+div.sheet-wit div.sheet-section-small{
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockWit.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 600px;
+}
+
+div.sheet-wit label{
+	width: 65px;
+	font-size: 11px;
+}
+
+div.sheet-wit input{
+	text-align: center;
+	width: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 55px;
+}
+
+div.sheet-wit span{
+	margin-left: 24px;
+	font-size: 20px;
+	font-weight: 600;
+	width: 25px;
+}
+
+div.sheet-wit button{
+	font-size: 10px;
+	border: none;
+	background-color: inherit;
+	font-weight: 600;
+	background-image: none;
+}
+
+div.sheet-wit button[type=roll]::before{
+	display:none;
+}
+
+div.sheet-wit button:hover{
+	color: red;
+}
+
+/* TINKERING SECTION */
+
+div.sheet-tinkering{
+	grid-area: tinkering;
+	margin-left: 15px;
+}
+
+div.sheet-tinkering div.sheet-section-small{
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockTinkering.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 600px;
+}
+
+div.sheet-tinkering label{
+	width: 65px;
+	font-size: 11px;
+}
+
+div.sheet-tinkering input{
+	text-align: center;
+	width: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 55px;
+}
+
+div.sheet-tinkering span{
+	margin-left: 24px;
+	font-size: 20px;
+	font-weight: 600;
+	width: 25px;
+}
+
+div.sheet-tinkering button{
+	font-size: 10px;
+	border: none;
+	background-color: inherit;
+	font-weight: 600;
+	background-image: none;
+}
+
+div.sheet-tinkering button[type=roll]::before{
+	display:none;
+}
+
+div.sheet-tinkering button:hover{
+	color: red;
+}
+
+/* INITIATIVE SECTION */
+
+div.sheet-initiative{
+	grid-area: initiative;
+	margin-left: 15px;
+}
+
+div.sheet-initiative div.sheet-section-small{
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockTinkering.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 600px;
+}
+
+div.sheet-initiative label{
+	width: 65px;
+	font-size: 11px;
+}
+
+div.sheet-initiative input{
+	text-align: center;
+	width: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 55px;
+}
+
+div.sheet-initiative span{
+	margin-left: 24px;
+	font-size: 20px;
+	font-weight: 600;
+	width: 25px;
+}
+
+div.sheet-initiative button{
+	font-size: 10px;
+	border: none;
+	background-color: inherit;
+	font-weight: 600;
+	background-image: none;
+}
+
+div.sheet-initiative button[type=roll]::before{
+	display:none;
+}
+
+div.sheet-initiative button:hover{
+	color: red;
+}
 
 
 

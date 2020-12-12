@@ -70,17 +70,137 @@
 	<input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab"  value="character"  />
 	<div class="character">
 		<div class="stats">
-			<div class="strength">
+			<div class="melee">
 				<div class="section-small flex-center">
-					<label>Strength</label>
-					<input name="attr_strength" type="number" value="">
-					<span name="attr_strength_bonus">13</span>
-					<div class="strengthButton">
-						<label><button name="roll_strength" type="roll" value="&{template:default} {{name=Strength}} {{Result=[[d20+(@{strength_bonus})]]}}"></button></label>
-					</div>
+					<label><button name="roll_melee" type="roll" value="&{template:default} {{name=Melee}} {{Result=[[d20+(@{melee_bonus})+(@{meleeForceMod})]]}}">Melee</button></label>
+					<input name="attr_melee" type="number" value="00">
+					<span name="attr_melee_bonus">00</span>
 				</div>
 			</div>
+			
+			<div class="ranged">
+				<div class="section-small flex-center">
+					<label><button name="roll_ranged" type="roll" value="&{template:default} {{name=Ranged}} {{Result=[[d20+(@{ranged_bonus})+(@{rangedForceMod})]]}}">Ranged</button></label>
+					<input name="attr_ranged" type="number" value="00">
+					<span name="attr_ranged_bonus">00</span>
+				</div>
+			</div>
+			
+			<div class="strength">
+				<div class="section-small flex-center">
+					<label><button name="roll_str" type="roll" value="&{template:default} {{name=Strength}} {{Result=[[d20+(@{str_bonus})+(@{strengthForceMod})]]}}">Strength</button></label>
+					<input name="attr_str" type="number" value="00">
+					<span name="attr_str_bonus">00</span>
+				</div>
+			</div>
+			
+			<div class="consitution">
+				<div class="section-small flex-center">
+					<label><button name="roll_str" type="roll" value="&{template:default} {{name=Consitution}} {{Result=[[d20+(@{con_bonus})+(@{consitutionForceMod})]]}}">Consitution</button></label>
+					<input name="attr_con" type="number" value="00">
+					<span name="attr_con_bonus">00</span>
+				</div>
+			</div>
+			
+			<div class="perception">
+				<div class="section-small flex-center">
+					<label><button name="roll_per" type="roll" value="&{template:default} {{name=Perception}} {{Result=[[d20+(@{per_bonus})+(@{perceptionForceMod})]]}}">Perception</button></label>
+					<input name="attr_per" type="number" value="00">
+					<span name="attr_per_bonus">00</span>
+				</div>
+			</div>
+			
+			<div class="movement">
+				<div class="section-small flex-center">
+					<label><button name="roll_move" type="roll" value="&{template:default} {{name=Movement}} {{Result=[[d20+(@{move_bonus})+(@{movementForceMod})]]}}">Movement</button></label>
+					<input name="attr_move" type="number" value="00">
+					<span name="attr_move_bonus">00</span>
+				</div>
+			</div>
+			
+			<div class="stealth">
+				<div class="section-small flex-center">
+					<label><button name="roll_ste" type="roll" value="&{template:default} {{name=Stealth}} {{Result=[[d20+(@{ste_bonus})+(@{stealthForceMod})]]}}">Stealth</button></label>
+					<input name="attr_ste" type="number" value="00">
+					<span name="attr_ste_bonus">00</span>
+				</div>
+			</div>
+			
+			<div class="finesse">
+				<div class="section-small flex-center">
+					<label><button name="roll_fin" type="roll" value="&{template:default} {{name=Finesse}} {{Result=[[d20+(@{fin_bonus})+(@{finForceMod})]]}}">Finesse</button></label>
+					<input name="attr_fin" type="number" value="00">
+					<span name="attr_fin_bonus">00</span>
+				</div>
+			</div>
+			
+			<div class="control">
+				<div class="section-small flex-center">
+					<label><button name="roll_cont" type="roll" value="&{template:default} {{name=Control}} {{Result=[[d20+(@{cont_bonus})+(@{contForceMod})]]}}">Control</button></label>
+					<input name="attr_cont" type="number" value="00">
+					<span name="attr_cont_bonus">00</span>
+				</div>
+			</div>
+			
+			<div class="charm">
+				<div class="section-small flex-center">
+					<label><button name="roll_cha" type="roll" value="&{template:default} {{name=Charm}} {{Result=[[d20+(@{cha_bonus})+(@{chaForceMod})]]}}">Charm</button></label>
+					<input name="attr_cha" type="number" value="00">
+					<span name="attr_cha_bonus">00</span>
+				</div>
+			</div>
+			
+			<div class="terror">
+				<div class="section-small flex-center">
+					<label><button name="roll_ter" type="roll" value="&{template:default} {{name=Terror}} {{Result=[[d20+(@{ter_bonus})+(@{terForceMod})]]}}">Terror</button></label>
+					<input name="attr_ter" type="number" value="00">
+					<span name="attr_ter_bonus">00</span>
+				</div>
+			</div>
+			
+			<div class="intellect">
+				<div class="section-small flex-center">
+					<label><button name="roll_int" type="roll" value="&{template:default} {{name=Intellect}} {{Result=[[d20+(@{int_bonus})+(@{intForceMod})]]}}">Intellect</button></label>
+					<input name="attr_int" type="number" value="00">
+					<span name="attr_int_bonus">00</span>
+				</div>
+			</div>
+			
+			<div class="wit">
+				<div class="section-small flex-center">
+					<label><button name="roll_wit" type="roll" value="&{template:default} {{name=Wit}} {{Result=[[d20+(@{wit_bonus})+(@{witForceMod})]]}}">Wit</button></label>
+					<input name="attr_wit" type="number" value="00">
+					<span name="attr_wit_bonus">00</span>
+				</div>
+			</div>
+			
+			<div class="tinkering">
+				<div class="section-small flex-center">
+					<label><button name="roll_tin" type="roll" value="&{template:default} {{name=Tinkering}} {{Result=[[d20+(@{tin_bonus})+(@{tinForceMod})]]}}">Tinkering</button></label>
+					<input name="attr_tin" type="number" value="00">
+					<span name="attr_tin_bonus">00</span>
+				</div>
+			</div>
+			
+			<div class="initiative">
+				<div class="section-small flex-center">
+					<label><button name="roll_ini" type="roll" value="&{template:default} {{name=Initiative}} {{Result=[[d20+(@{move_bonus})+(@{moveForceMod})+(@{iniForceMod})]]}} &{tacker}">Initiative</button></label>
+					<span name="attr_ini_bonus">00</span>
+				</div>
+			</div>
+			
+			
+			
 		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	</div>
 
 
@@ -139,4 +259,20 @@
             });
         });
     });
+	// Mod Control
+	const int = score => parseInt(score, 10) || 0;
+	const stats = ["melee","ranged","str","con","per","move","ste","fin","cont","cha","ter","int","wit","tin"];
+	stats.forEach(stat => {
+		on(`change:${stat}`, () => {
+			getAttrs([stat], values => {
+				const stat_base = int(values[stat]);
+				console.log(stat_base);
+				let stat_bonus = 0;
+				stat_bonus = Math.max(-5, Math.floor(stat_base /2) -5);
+				setAttrs({
+					[`${stat}_bonus`]: stat_bonus
+				});
+			});
+		});
+	});
 </script>
