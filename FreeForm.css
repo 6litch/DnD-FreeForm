@@ -1143,9 +1143,28 @@ div.sheet-initiative button:hover{
 	color: red;
 }
 
+/* MONEY SECTION */
 
+div.sheet-money{
+	grid-area: money;
+	display:grid;
+	margin-left: 15px;
+	grid-template-columns: 80px 80px;
+	grid-template-rows: 45px 45px;
+	grid-template-areas:"copper		silver"
+						"gold		plat";
+	grid-gap: 6px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/BoxFive.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 115px;
+	width: 600px;
+}
 
-
+div.sheet-copper{
+	grid-area: copper;
+	margin-left: 15px;
+}
 
 
 /*--------------------------------*/
