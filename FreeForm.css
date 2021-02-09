@@ -285,7 +285,7 @@ div.sheet-quirk input{
 div.sheet-buttons{
   grid-area: buttons;
   padding-top: 35px;
-  padding-left: 115px;
+  padding-left: 95px;
 }
 
 div.sheet-buttons div.sheet-section-small{
@@ -307,6 +307,7 @@ div.sheet-buttons input{
 }
 
 .sheet-charButton,
+.sheet-skillsButton,
 .sheet-abiButton,
 .sheet-invButton,
 .sheet-noteButton,
@@ -318,6 +319,7 @@ div.sheet-buttons input{
 .sheet-tabstoggle[value="character"] ~ button.sheet-charButton,
 .sheet-tabstoggle[value="note"] ~ button.sheet-noteButton,
 .sheet-tabstoggle[value="inventory"] ~ button.sheet-invButton,
+.sheet-tabstoggle[value="skills"] ~ button.sheet-skillsButton,
 .sheet-tabstoggle[value="abi"] ~ button.sheet-abiButton,
 .sheet-tabstoggle[value="settings"] ~ button.sheet-settingsButton{
 	background-color: #ff0000;
@@ -345,6 +347,7 @@ div.sheet-bbackground div.sheet-section-small{
 .sheet-character,
 .sheet-inventory,
 .sheet-note,
+.sheet-skills,
 .sheet-abi,
 .sheet-settings{
 	display: none;
@@ -352,6 +355,7 @@ div.sheet-bbackground div.sheet-section-small{
 /* show the selected tab */
 .sheet-tabstoggle[value="character"] ~ div.sheet-character,
 .sheet-tabstoggle[value="note"] ~ div.sheet-note,
+.sheet-tabstoggle[value="skills"] ~ div.sheet-skills,
 .sheet-tabstoggle[value="inventory"] ~ div.sheet-inventory,
 .sheet-tabstoggle[value="abi"] ~ div.sheet-abi,
 .sheet-tabstoggle[value="settings"] ~ div.sheet-settings{
@@ -366,13 +370,13 @@ div.sheet-stats{
 	display:grid;
 	grid-template-columns: 260px 260px 80px;
 	grid-template-rows: 75px	75px	75px	75px;
-	grid-template-areas:"melee		ranged		initiative"
-						"strength	consitution	money"
+	grid-template-areas:"strength	consitution	initiative"
 						"perception	movement	money"
-						"stealth	finesse		exslot"
+						"wit		finesse		money"
 						"control	charm		exslot"
-						"terror		intellect	move"
-						"wit		tinkering	tol"
+						"terror		intellect	exslot"
+						"stealth	tinkering	move"
+						"melee		ranged		tol"
 						"income		wanted		renown";
 	grid-gap: 6px;
 }
@@ -1148,7 +1152,7 @@ div.sheet-initiative button:hover{
 div.sheet-money{
 	grid-area: money;
 	display:grid;
-	margin-left: 15px;
+	margin-left: 55px;
 	grid-template-columns: 80px 80px;
 	grid-template-rows: 45px 45px;
 	grid-template-areas:"copper		silver"
@@ -1162,11 +1166,97 @@ div.sheet-money{
 }
 
 div.sheet-copper{
+	margin-top: 15px;
 	grid-area: copper;
 	margin-left: 15px;
 }
 
+div.sheet-silver{
+	margin-top: 15px;
+	grid-area: silver;
+	margin-left: 15px;
+}
 
+div.sheet-gold{
+	margin-top: 15px;
+	grid-area: gold;
+	margin-left: 15px;
+}
+
+div.sheet-plat{
+	margin-top: 15px;
+	grid-area: plat;
+	margin-left: 15px;
+}
+
+/*--------------------------------*/
+/* ------ Skills Structure ------ */
+/*--------------------------------*/
+
+
+
+
+/*--------------------------------*/
+/* ---- Abilities Structure ----- */
+/*--------------------------------*/
+.sheet-abiarea {
+  display: grid;
+  width: 800px;
+  height: 1070px;
+  margin-left: 25px;
+  grid-gap: 4px;
+  grid-template-columns: 795px;
+  grid-template-rows: 1060px;
+  grid-template-areas:"ability";
+}
+
+.sheet-ability{
+    grid-area:ability;
+}
+	
+
+/*--------------------------------*/
+/* ---- Inventory Structure ----- */
+/*--------------------------------*/
+.sheet-invarea {
+  display: grid;
+  width: 800px;
+  height: 1070px;
+  margin-left: 25px;
+  grid-gap: 4px;
+  grid-template-columns: 220px 575px;
+  grid-template-rows: 200px;
+  grid-template-areas:"slots  inv";
+}
+.sheet-inv{
+    grid-area:inv;
+}
+.sheet-slots{
+    grid-area:slots;
+}
+
+
+/*--------------------------------*/
+/* ------ Notes Structure ------- */
+/*--------------------------------*/
+
+div.sheet-notearea{
+    display: grid;
+	width: 800px;
+	height: 800px;
+	margin-left: 25px;
+	grid-gap: 4px;
+	grid-template-columns: 795px;
+	grid-template-rows: 790px;
+	grid-template-areas:"notes";
+}
+div.sheet-notes{
+    grid-area:notes;
+}
+div.sheet-notes textarea{
+    width:790px;
+	height:600px;
+}
 /*--------------------------------*/
 /* ----- Setting Structure ------ */
 /*--------------------------------*/

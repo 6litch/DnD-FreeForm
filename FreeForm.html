@@ -61,6 +61,7 @@
 		<div class="section-small flex-center">
 			<input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab'  value='character'  />
 			<button class="charButton" type="action" name="act_character" >Character</button>
+			<button class="skillsButton" type="action" name="act_skills" >Skills</button>
 			<button class="abiButton" type="action" name="act_abi" >Abilities</button>
 			<button class="invButton" type="action" name="act_inventory" >Inventory</button>
 			<button class="noteButton" type="action" name="act_note" >Notes</button>
@@ -68,6 +69,11 @@
 		</div>
 	</div>
 	<input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab"  value="character"  />
+	
+	<!---------------->
+	<!-- Main Stats -->
+	<!---------------->
+	
 	<div class="character">
 		<div class="stats">
 			<div class="melee">
@@ -191,7 +197,28 @@
 			
 			<div class="money">
 				<div class="copper">
-					<label>test</label>
+					<div class="section-small flex-center">
+						<label>CP:</label>
+						<input type="number" name="attr_copper" style="width:50px" value="0"/>
+					</div>
+				</div>
+				<div class="silver">
+					<div class="section-small flex-center">
+						<label>SP:</label>
+						<input type="number" name="attr_silver" style="width:50px" value="0"/>
+					</div>
+				</div>
+				<div class="gold">
+					<div class="section-small flex-center">
+						<label>GP:</label>
+						<input type="number" name="attr_gold" style="width:50px" value="0"/>
+					</div>
+				</div>
+				<div class="plat">
+					<div class="section-small flex-center">
+						<label>PP:</label>
+						<input type="number" name="attr_plat" style="width:50px" value="0"/>
+					</div>
 				</div>
 			</div>
 			
@@ -208,6 +235,67 @@
 		
 	</div>
 
+	<!------------------>
+	<!-- Skills Stats -->
+	<!------------------>
+
+
+
+	<!--------------------->
+	<!-- Abilities Stats -->
+	<!--------------------->
+	<div class='sheet-abi'>
+        <div class="abiarea">
+            <div class ="ability">
+                <label>Quirk Abilities</label>
+                <fieldset class="repeating_ability">
+                    <label>Name:<input type="text" name="attr_abilityname"></label>
+                    <textarea name="attr_abilitydis" style="width:795px">details here</textarea>
+                </fieldset>
+            </div>                  
+        </div>
+	</div>
+	
+	
+	<!--------------------->
+	<!-- Inventory Stats -->
+	<!--------------------->
+	<div class='sheet-inventory'>
+		<div class="invarea">
+			<div class ="slots">
+				<label>Slots</label>
+				<fieldset class="repeating_slots">
+					<label>Name:<input type="text" name="attr_slotname" value="slot name here" style="width:100px"/></label>
+					<label>Amount:<input type="number" name="attr_slotamount" value="0" style="width:50px"/>/<input type="number" name="attr_slotamount_max" value="0" style="width:50px"/></label>
+				</fieldset>
+			</div>
+			<div class ="inv">
+				<label>Bag</label>
+				<fieldset class="repeating_inv">
+					<label>Name:<input type="text" name="attr_invname" style="width:100px"/></label>
+					<label>Amount:<input type="number" name="attr_invamount" style="width:50px" value="0"/>Equip:<input type="checkbox" name="attr_hasequip" value="1"/></label>
+					<textarea name="attr_invdis" style"width:100"></textarea>
+				</fieldset>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!----------------->
+	<!-- Notes Stats -->
+	<!----------------->
+	
+	<div class="note">
+		<div class ="notearea">
+			<div class ="notes">
+				<textarea name="attr_playernotes"></textarea>
+			</div>
+		</div>
+	</div>
+	
+	<!------------------->
+	<!-- Setting Stats -->
+	<!------------------->
 
 
 
@@ -256,7 +344,7 @@
 
 <script type="text/worker">
     //Tab Control
-    const buttonlist = ["character","note","abi","inventory","settings"];
+    const buttonlist = ["character","note","skills","abi","inventory","settings"];
     buttonlist.forEach(button => {
         on(`clicked:${button}`, function() {
             setAttrs({
