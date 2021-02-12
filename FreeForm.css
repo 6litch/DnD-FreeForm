@@ -1002,7 +1002,7 @@ div.sheet-skill{
 						"carpentry		leatherworking	weaving"
 						"cooking		jewelsmithing	none";
 	grid-gap: 6px;
-	margin-left: 25px;
+	margin-left: 0px;
 }
 
 /* MELEE SECTION */
@@ -1016,7 +1016,7 @@ div.sheet-melee div.sheet-section-small{
 	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
 	background-size: contain;
 	background-repeat: no-repeat;
-	height: 80px;
+	height: 75px;
 	width: 600px;
 }
 
@@ -1054,14 +1054,14 @@ div.sheet-melee button:hover{
 
 div.sheet-ranged{
 	grid-area: ranged;
-	margin-left: 15px;
+	margin-left: 22px;
 }
 
 div.sheet-ranged div.sheet-section-small{
 	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
 	background-size: contain;
 	background-repeat: no-repeat;
-	height: 80px;
+	height: 75px;
 	width: 600px;
 }
 
@@ -1098,14 +1098,14 @@ div.sheet-ranged button:hover{
 
 div.sheet-stealth{
 	grid-area: stealth;
-	margin-left: 15px;
+	margin-left: 28px;
 }
 
 div.sheet-stealth div.sheet-section-small{
 	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
 	background-size: contain;
 	background-repeat: no-repeat;
-	height: 80px;
+	height: 75px;
 	width: 600px;
 }
 
@@ -1142,11 +1142,11 @@ div.sheet-stealth button:hover{
 
 div.sheet-tinkering{
 	grid-area: tinkering;
-	margin-left: 15px;
+	margin-left: 22px;
 	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
 	background-size: contain;
 	background-repeat: no-repeat;
-	height: 80px;
+	height: 75px;
 	width: 600px;
 }
 
