@@ -1012,10 +1012,10 @@ div.sheet-melee{
 }
 
 div.sheet-melee div.sheet-section-small{
-	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockMelee.jpg?raw=true);
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
 	background-size: contain;
 	background-repeat: no-repeat;
-	height: 70px;
+	height: 80px;
 	width: 600px;
 }
 
@@ -1057,10 +1057,10 @@ div.sheet-ranged{
 }
 
 div.sheet-ranged div.sheet-section-small{
-	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockRanged.jpg?raw=true);
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
 	background-size: contain;
 	background-repeat: no-repeat;
-	height: 70px;
+	height: 80px;
 	width: 600px;
 }
 
@@ -1101,10 +1101,10 @@ div.sheet-stealth{
 }
 
 div.sheet-stealth div.sheet-section-small{
-	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockStealth.jpg?raw=true);
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
 	background-size: contain;
 	background-repeat: no-repeat;
-	height: 70px;
+	height: 80px;
 	width: 600px;
 }
 
@@ -1145,10 +1145,10 @@ div.sheet-tinkering{
 }
 
 div.sheet-tinkering div.sheet-section-small{
-	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockTinkering.jpg?raw=true);
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
 	background-size: contain;
 	background-repeat: no-repeat;
-	height: 70px;
+	height: 80px;
 	width: 600px;
 }
 
