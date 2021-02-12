@@ -76,21 +76,6 @@
 	
 	<div class="character">
 		<div class="stats">
-			<div class="melee">
-				<div class="section-small flex-center">
-					<label><button name="roll_melee" type="roll" value="&{template:default} {{name=Melee}} {{Result=[[d20+(@{melee_bonus})+(@{meleeForceMod})]]}}">Melee</button></label>
-					<input name="attr_melee" type="number" value="00">
-					<span name="attr_melee_bonus">00</span>
-				</div>
-			</div>
-			
-			<div class="ranged">
-				<div class="section-small flex-center">
-					<label><button name="roll_ranged" type="roll" value="&{template:default} {{name=Ranged}} {{Result=[[d20+(@{ranged_bonus})+(@{rangedForceMod})]]}}">Ranged</button></label>
-					<input name="attr_ranged" type="number" value="00">
-					<span name="attr_ranged_bonus">00</span>
-				</div>
-			</div>
 			
 			<div class="strength">
 				<div class="section-small flex-center">
@@ -102,7 +87,7 @@
 			
 			<div class="consitution">
 				<div class="section-small flex-center">
-					<label><button name="roll_str" type="roll" value="&{template:default} {{name=Consitution}} {{Result=[[d20+(@{con_bonus})+(@{consitutionForceMod})]]}}">Consitution</button></label>
+					<label><button name="roll_con" type="roll" value="&{template:default} {{name=Consitution}} {{Result=[[d20+(@{con_bonus})+(@{consitutionForceMod})]]}}">Consitution</button></label>
 					<input name="attr_con" type="number" value="00">
 					<span name="attr_con_bonus">00</span>
 				</div>
@@ -121,14 +106,6 @@
 					<label><button name="roll_move" type="roll" value="&{template:default} {{name=Movement}} {{Result=[[d20+(@{move_bonus})+(@{movementForceMod})]]}}">Movement</button></label>
 					<input name="attr_move" type="number" value="00">
 					<span name="attr_move_bonus">00</span>
-				</div>
-			</div>
-			
-			<div class="stealth">
-				<div class="section-small flex-center">
-					<label><button name="roll_ste" type="roll" value="&{template:default} {{name=Stealth}} {{Result=[[d20+(@{ste_bonus})+(@{stealthForceMod})]]}}">Stealth</button></label>
-					<input name="attr_ste" type="number" value="00">
-					<span name="attr_ste_bonus">00</span>
 				</div>
 			</div>
 			
@@ -177,14 +154,6 @@
 					<label><button name="roll_wit" type="roll" value="&{template:default} {{name=Wit}} {{Result=[[d20+(@{wit_bonus})+(@{witForceMod})]]}}">Wit</button></label>
 					<input name="attr_wit" type="number" value="00">
 					<span name="attr_wit_bonus">00</span>
-				</div>
-			</div>
-			
-			<div class="tinkering">
-				<div class="section-small flex-center">
-					<label><button name="roll_tin" type="roll" value="&{template:default} {{name=Tinkering}} {{Result=[[d20+(@{tin_bonus})+(@{tinForceMod})]]}}">Tinkering</button></label>
-					<input name="attr_tin" type="number" value="00">
-					<span name="attr_tin_bonus">00</span>
 				</div>
 			</div>
 			
@@ -238,13 +207,44 @@
 	<!------------------>
 	<!-- Skills Stats -->
 	<!------------------>
+	<div class="sheet-skills">
+		<div class="skill">
+			<div class="melee">
+				<div class="section-small flex-center">
+					<label><button name="roll_melee" type="roll" value="&{template:default} {{name=Melee}} {{Result=[[d20+(@{melee_bonus})+(@{meleeForceMod})]]}}">Melee</button></label>
+					<input name="attr_melee" type="number" value="00">
+				</div>
+			</div>
+			<div class="ranged">
+				<div class="section-small flex-center">
+					<label><button name="roll_ranged" type="roll" value="&{template:default} {{name=Ranged}} {{Result=[[d20+(@{ranged_bonus})+(@{rangedForceMod})]]}}">Ranged</button></label>
+					<input name="attr_ranged" type="number" value="00">
+				</div>
+			</div>
+			<div class="stealth">
+				<div class="section-small flex-center">
+					<label><button name="roll_ste" type="roll" value="&{template:default} {{name=Stealth}} {{Result=[[d20+(@{ste_bonus})+(@{stealthForceMod})]]}}">Stealth</button></label>
+					<input name="attr_ste" type="number" value="00">
+				</div>
+			</div>
+			<div class="tinkering">
+				<div class="section-small flex-center">
+					<label><button name="roll_tin" type="roll" value="&{template:default} {{name=Tinkering}} {{Result=[[d20+(@{tin_bonus})+(@{tinForceMod})]]}}">Tinkering</button></label>
+					<input name="attr_tin" type="number" value="00">
+				</div>
+			</div>
+			
+			
+			
+			
+			
 
-
-
+		</div>
+	</div>
 	<!--------------------->
 	<!-- Abilities Stats -->
 	<!--------------------->
-	<div class='sheet-abi'>
+	<div class="sheet-abi">
         <div class="abiarea">
             <div class ="ability">
                 <label>Quirk Abilities</label>
@@ -260,7 +260,7 @@
 	<!--------------------->
 	<!-- Inventory Stats -->
 	<!--------------------->
-	<div class='sheet-inventory'>
+	<div class="sheet-inventory">
 		<div class="invarea">
 			<div class ="slots">
 				<label>Slots</label>
