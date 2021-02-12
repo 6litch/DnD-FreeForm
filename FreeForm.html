@@ -227,10 +227,23 @@
 					<input name="attr_ste" type="number" value="00">
 				</div>
 			</div>
+			
+			
+			
+			
 			<div class="tinkering">
+				<div class="stat1tinkering">
+					<label>Movement <span name="attr_move_bonus">00</span></label>
+				</div>
 				<div class="section-small flex-center">
 					<label><button name="roll_tin" type="roll" value="&{template:default} {{name=Tinkering}} {{Result=[[d20+(@{tin_bonus})+(@{tinForceMod})]]}}">Tinkering</button></label>
 					<input name="attr_tin" type="number" value="00">
+					<div class="tinkeringmod">
+						<input name="attr_tin_bonus" type="number" value="00">
+					</div>
+				</div>
+				<div class="stat2tinkering">
+					<label>Intellect <span name="attr_int_bonus">00</span></label>
 				</div>
 			</div>
 			
@@ -354,7 +367,7 @@
     });
 	// Mod Control
 	const int = score => parseInt(score, 10) || 0;
-	const stats = ["melee","ranged","str","con","per","move","ste","fin","cont","cha","ter","int","wit","tin"];
+	const stats = ["melee","ranged","str","con","per","move","ste","fin","cont","cha","ter","int","wit"];
 	stats.forEach(stat => {
 		on(`change:${stat}`, () => {
 			getAttrs([stat], values => {
