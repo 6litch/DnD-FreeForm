@@ -3,7 +3,7 @@
 <div class="main">
 	<!-- Logo Section -->
     <div class="logo section"> 
-		<span> Sheet Version:3.0.3 </span>
+		<span> Sheet Version:3.4.0 </span>
 	</div>
 	
 	<!-- Main Details -->
@@ -160,7 +160,7 @@
 			<div class="initiative">
 				<div class="section-small flex-center">
 					<label><button name="roll_ini" type="roll" value="&{template:default} {{name=Initiative}} {{Result=[[d20+(@{move_bonus})+(@{moveForceMod})+(@{iniForceMod})]]}} &{tacker}">Initiative</button></label>
-					<span name="attr_ini_bonus">00</span>
+					<span name="attr_move_bonus">00</span>
 				</div>
 			</div>
 			
@@ -192,6 +192,13 @@
 			</div>
 			
 			
+			
+			
+			
+			
+			
+			
+			
 		</div>
 		
 		
@@ -210,48 +217,246 @@
 	<div class="sheet-skills">
 		<div class="skill">
 			<div class="melee">
-				<div class="section-small flex-center">
-					<label><button name="roll_melee" type="roll" value="&{template:default} {{name=Melee}} {{Result=[[d20+(@{melee_bonus})+(@{meleeForceMod})]]}}">Melee</button></label>
-					<input name="attr_melee" type="number" value="00">
+				<div class="skillSlot">
+					<div class="skillStatOne">
+						<label>Movement <span name="attr_move_bonus">00</span></label>
+					</div>
+					<div class="section-small flex-center">
+						<label><button name="roll_melee" type="roll" value="&{template:default} {{name=Melee}} {{Result=[[d20+(@{melee_bonus})+(@{meleeForceMod})]]}}">Melee</button></label>
+						<input name="attr_melee" type="number" value="00">
+						<div class="skillMod">
+							<input name="attr_melee_bonus" type="number" value="00">
+						</div>
+					</div>
+					<div class="skillStatTwo">
+						<label>Strength <span name="attr_str_bonus">00</span></label>
+					</div>
 				</div>
 			</div>
 			<div class="ranged">
-				<div class="section-small flex-center">
-					<label><button name="roll_ranged" type="roll" value="&{template:default} {{name=Ranged}} {{Result=[[d20+(@{ranged_bonus})+(@{rangedForceMod})]]}}">Ranged</button></label>
-					<input name="attr_ranged" type="number" value="00">
+				<div class="skillSlot">
+					<div class="skillStatOne">
+						<label>Perception <span name="attr_per_bonus">00</span></label>
+					</div>
+					<div class="section-small flex-center">
+						<label><button name="roll_ranged" type="roll" value="&{template:default} {{name=Ranged}} {{Result=[[d20+(@{ranged_bonus})+(@{rangedForceMod})]]}}">Ranged</button></label>
+						<input name="attr_ranged" type="number" value="00">
+						<div class="skillMod">
+							<input name="attr_ranged_bonus" type="number" value="00">
+						</div>
+					</div>
+					<div class="skillStatTwo">
+						<label>Finesse <span name="attr_fin_bonus">00</span></label>
+					</div>
 				</div>
 			</div>
 			<div class="stealth">
-				<div class="section-small flex-center">
-					<label><button name="roll_ste" type="roll" value="&{template:default} {{name=Stealth}} {{Result=[[d20+(@{ste_bonus})+(@{stealthForceMod})]]}}">Stealth</button></label>
-					<input name="attr_ste" type="number" value="00">
-				</div>
-			</div>
-			
-			
-			
-			
-			<div class="tinkering">
-				<div class="stat1tinkering">
-					<label>Movement <span name="attr_move_bonus">00</span></label>
-				</div>
-				<div class="section-small flex-center">
-					<label><button name="roll_tin" type="roll" value="&{template:default} {{name=Tinkering}} {{Result=[[d20+(@{tin_bonus})+(@{tinForceMod})]]}}">Tinkering</button></label>
-					<input name="attr_tin" type="number" value="00">
-					<div class="tinkeringmod">
-						<input name="attr_tin_bonus" type="number" value="00">
+				<div class="skillSlot">
+					<div class="skillStatOne">
+						<label>Movement <span name="attr_move_bonus">00</span></label>
+					</div>
+					<div class="section-small flex-center">
+						<label><button name="roll_ste" type="roll" value="&{template:default} {{name=Stealth}} {{Result=[[d20+(@{ste_bonus})+(@{stealthForceMod})]]}}">Stealth</button></label>
+						<input name="attr_ste" type="number" value="00">
+						<div class="skillMod">
+							<input name="attr_ste_bonus" type="number" value="00">
+						</div>
+					</div>
+					<div class="skillStatTwo">
+						<label>Finesse <span name="attr_fin_bonus">00</span></label>
 					</div>
 				</div>
-				<div class="stat2tinkering">
-					<label>Intellect <span name="attr_int_bonus">00</span></label>
+			</div>
+			<div class="medicine">
+				<div class="skillSlot">
+					<div class="skillStatOne">
+						<label>Wit <span name="attr_wit_bonus">00</span></label>
+					</div>
+					<div class="section-small flex-center">
+						<label><button name="roll_med" type="roll" value="&{template:default} {{name=Medicine}} {{Result=[[d20+(@{med_bonus})+(@{medicineForceMod})]]}}">Medicine</button></label>
+						<input name="attr_med" type="number" value="00">
+						<div class="skillMod">
+							<input name="attr_med_bonus" type="number" value="00">
+						</div>
+					</div>
+					<div class="skillStatTwo">
+						<label>Intellect <span name="attr_int_bonus">00</span></label>
+					</div>
 				</div>
 			</div>
-			
-			
-			
-			
-			
-
+			<div class="alchemy">
+				<div class="skillSlot">
+					<div class="skillStatOne">
+						<label>Finesse <span name="attr_fin_bonus">00</span></label>
+					</div>
+					<div class="section-small flex-center">
+						<label><button name="roll_alc" type="roll" value="&{template:default} {{name=Alchemy}} {{Result=[[d20+(@{alc_bonus})+(@{alchemyForceMod})]]}}">Alchemy</button></label>
+						<input name="attr_alc" type="number" value="00">
+						<div class="skillMod">
+							<input name="attr_alc_bonus" type="number" value="00">
+						</div>
+					</div>
+					<div class="skillStatTwo">
+						<label>Intellect <span name="attr_int_bonus">00</span></label>
+					</div>
+				</div>
+			</div>
+			<div class="tinkering">
+				<div class="skillSlot">
+					<div class="skillStatOne">
+						<label>Movement <span name="attr_move_bonus">00</span></label>
+					</div>
+					<div class="section-small flex-center">
+						<label><button name="roll_tin" type="roll" value="&{template:default} {{name=Tinkering}} {{Result=[[d20+(@{tin_bonus})+(@{tinForceMod})]]}}">Tinkering</button></label>
+						<input name="attr_tin" type="number" value="00">
+						<div class="skillMod">
+							<input name="attr_tin_bonus" type="number" value="00">
+						</div>
+					</div>
+					<div class="skillStatTwo">
+						<label>Intellect <span name="attr_int_bonus">00</span></label>
+					</div>
+				</div>
+			</div>
+			<div class="electronics">
+				<div class="skillSlot">
+					<div class="skillStatOne">
+						<label>Perception <span name="attr_per_bonus">00</span></label>
+					</div>
+					<div class="section-small flex-center">
+						<label><button name="roll_ele" type="roll" value="&{template:default} {{name=Electronics}} {{Result=[[d20+(@{ele_bonus})+(@{eleForceMod})]]}}">Electronics</button></label>
+						<input name="attr_ele" type="number" value="00">
+						<div class="skillMod">
+							<input name="attr_ele_bonus" type="number" value="00">
+						</div>
+					</div>
+					<div class="skillStatTwo">
+						<label>Intellect <span name="attr_int_bonus">00</span></label>
+					</div>
+				</div>
+			</div>
+			<div class="hacking">
+				<div class="skillSlot">
+					<div class="skillStatOne">
+						<label>Finesse <span name="attr_fin_bonus">00</span></label>
+					</div>
+					<div class="section-small flex-center">
+						<label><button name="roll_hack" type="roll" value="&{template:default} {{name=Hacking}} {{Result=[[d20+(@{hack_bonus})+(@{hackForceMod})]]}}">Hacking</button></label>
+						<input name="attr_hack" type="number" value="00">
+						<div class="skillMod">
+							<input name="attr_hack_bonus" type="number" value="00">
+						</div>
+					</div>
+					<div class="skillStatTwo">
+						<label>Intellect <span name="attr_int_bonus">00</span></label>
+					</div>
+				</div>
+			</div>
+			<div class="metalworking">
+				<div class="skillSlot">
+					<div class="skillStatOne">
+						<label>Strength <span name="attr_str_bonus">00</span></label>
+					</div>
+					<div class="section-small flex-center">
+						<label><button name="roll_met" type="roll" value="&{template:default} {{name=Metalworking}} {{Result=[[d20+(@{met_bonus})+(@{metForceMod})]]}}">Metalworking</button></label>
+						<input name="attr_met" type="number" value="00">
+						<div class="skillMod">
+							<input name="attr_met_bonus" type="number" value="00">
+						</div>
+					</div>
+					<div class="skillStatTwo">
+						<label>Intellect <span name="attr_int_bonus">00</span></label>
+					</div>
+				</div>
+			</div>
+			<div class="carpentry">
+				<div class="skillSlot">
+					<div class="skillStatOne">
+						<label>Strength <span name="attr_str_bonus">00</span></label>
+					</div>
+					<div class="section-small flex-center">
+						<label><button name="roll_car" type="roll" value="&{template:default} {{name=Carpentry}} {{Result=[[d20+(@{car_bonus})+(@{carForceMod})]]}}">Carpentry</button></label>
+						<input name="attr_car" type="number" value="00">
+						<div class="skillMod">
+							<input name="attr_car_bonus" type="number" value="00">
+						</div>
+					</div>
+					<div class="skillStatTwo">
+						<label>Finesse <span name="attr_fin_bonus">00</span></label>
+					</div>
+				</div>
+			</div>
+			<div class="leatherworking">
+				<div class="skillSlot">
+					<div class="skillStatOne">
+						<label>Finesse <span name="attr_fin_bonus">00</span></label>
+					</div>
+					<div class="section-small flex-center">
+						<label><button name="roll_lea" type="roll" value="&{template:default} {{name=Leatherworking}} {{Result=[[d20+(@{lea_bonus})+(@{leaForceMod})]]}}">Leatherworking</button></label>
+						<input name="attr_lea" type="number" value="00">
+						<div class="skillMod">
+							<input name="attr_lea_bonus" type="number" value="00">
+						</div>
+					</div>
+					<div class="skillStatTwo">
+						<label>Intellect <span name="attr_int_bonus">00</span></label>
+					</div>
+				</div>
+			</div>
+			<div class="weaving">
+				<div class="skillSlot">
+					<div class="skillStatOne">
+						<label>Finesse <span name="attr_fin_bonus">00</span></label>
+					</div>
+					<div class="section-small flex-center">
+						<label><button name="roll_wea" type="roll" value="&{template:default} {{name=Weaving}} {{Result=[[d20+(@{wea_bonus})+(@{weaForceMod})]]}}">Weaving</button></label>
+						<input name="attr_wea" type="number" value="00">
+						<div class="skillMod">
+							<input name="attr_wea_bonus" type="number" value="00">
+						</div>
+					</div>
+					<div class="skillStatTwo">
+						<label>Wit <span name="attr_wit_bonus">00</span></label>
+					</div>
+				</div>
+			</div>
+			<div class="cooking">
+				<div class="skillSlot">
+					<div class="skillStatOne">
+						<label>Intellect <span name="attr_int_bonus">00</span></label>
+					</div>
+					<div class="section-small flex-center">
+						<label><button name="roll_cook" type="roll" value="&{template:default} {{name=Cooking}} {{Result=[[d20+(@{cook_bonus})+(@{cookForceMod})]]}}">Cooking</button></label>
+						<input name="attr_cook" type="number" value="00">
+						<div class="skillMod">
+							<input name="attr_cook_bonus" type="number" value="00">
+						</div>
+					</div>
+					<div class="skillStatTwo">
+						<label>Wit <span name="attr_wit_bonus">00</span></label>
+					</div>
+				</div>
+			</div>
+			<div class="jewelsmithing">
+				<div class="skillSlot">
+					<div class="skillStatOne">
+						<label>Finesse <span name="attr_fin_bonus">00</span></label>
+					</div>
+					<div class="section-small flex-center">
+						<label><button name="roll_jewel" type="roll" value="&{template:default} {{name=Jewelsmithing}} {{Result=[[d20+(@{jewel_bonus})+(@{jewelForceMod})]]}}">Jewelsmithing</button></label>
+						<input name="attr_jewel" type="number" value="00">
+						<div class="skillMod">
+							<input name="attr_jewel_bonus" type="number" value="00">
+						</div>
+					</div>
+					<div class="skillStatTwo">
+						<label>Intellect <span name="attr_int_bonus">00</span></label>
+					</div>
+				</div>
+			</div>
+	
+	
+	
 		</div>
 	</div>
 	<!--------------------->
@@ -367,7 +572,7 @@
     });
 	// Mod Control
 	const int = score => parseInt(score, 10) || 0;
-	const stats = ["melee","ranged","str","con","per","move","ste","fin","cont","cha","ter","int","wit"];
+	const stats = ["str","con","per","move","fin","cont","cha","ter","int","wit"];
 	stats.forEach(stat => {
 		on(`change:${stat}`, () => {
 			getAttrs([stat], values => {

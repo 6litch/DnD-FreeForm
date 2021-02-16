@@ -925,7 +925,7 @@ div.sheet-initiative input{
 }
 
 div.sheet-initiative span{
-	margin-left: 24px;
+	margin-left: 75px;
 	font-size: 20px;
 	font-weight: 600;
 	width: 25px;
@@ -989,6 +989,7 @@ div.sheet-plat{
 	margin-left: 15px;
 }
 
+
 /*--------------------------------*/
 /* ------ Skills Structure ------ */
 /*--------------------------------*/
@@ -998,7 +999,7 @@ div.sheet-skill{
 	grid-template-rows: 75px	75px	75px	75px;
 	grid-template-areas:"melee			ranged			stealth"
 						"medicine		alchemy			tinkering"
-						"electronics	hackiing		metalworking"
+						"electronics	hacking			metalworking"
 						"carpentry		leatherworking	weaving"
 						"cooking		jewelsmithing	none";
 	grid-gap: 6px;
@@ -1009,45 +1010,12 @@ div.sheet-skill{
 
 div.sheet-melee{
 	grid-area: melee;
-	margin-left: 15px;
-}
-
-div.sheet-melee div.sheet-section-small{
+	margin-left: 14px;
 	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
 	background-size: contain;
 	background-repeat: no-repeat;
 	height: 75px;
 	width: 600px;
-}
-
-div.sheet-melee label{
-	width: 72px;
-	font-size: 11px;
-}
-
-div.sheet-melee input{
-	text-align: center;
-	width: 10px;
-	font-size: 20px;
-	font-weight: 600;
-	margin-left: 70px;
-}
-
-
-div.sheet-melee button{
-	font-size: 10px;
-	border: none;
-	background-color: inherit;
-	font-weight: 600;
-	background-image: none;
-}
-
-div.sheet-melee button[type=roll]::before{
-	display:none;
-}
-
-div.sheet-melee button:hover{
-	color: red;
 }
 
 /* RANGED SECTION */
@@ -1055,53 +1023,18 @@ div.sheet-melee button:hover{
 div.sheet-ranged{
 	grid-area: ranged;
 	margin-left: 22px;
-}
-
-div.sheet-ranged div.sheet-section-small{
 	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
 	background-size: contain;
 	background-repeat: no-repeat;
 	height: 75px;
 	width: 600px;
-}
-
-div.sheet-ranged label{
-	width: 85px;
-	font-size: 11px;
-}
-
-div.sheet-ranged input{
-	text-align: center;
-	width: 10px;
-	font-size: 20px;
-	font-weight: 600;
-	margin-left: 55px;
-}
-
-div.sheet-ranged button{
-	font-size: 10px;
-	border: none;
-	background-color: inherit;
-	font-weight: 600;
-	background-image: none;
-}
-
-div.sheet-ranged button[type=roll]::before{
-	display:none;
-}
-
-div.sheet-ranged button:hover{
-	color: red;
 }
 
 /* STEALTH SECTION */
 
 div.sheet-stealth{
 	grid-area: stealth;
-	margin-left: 28px;
-}
-
-div.sheet-stealth div.sheet-section-small{
+	margin-left: 30px;
 	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -1109,39 +1042,21 @@ div.sheet-stealth div.sheet-section-small{
 	width: 600px;
 }
 
-div.sheet-stealth label{
-	width: 85px;
-	font-size: 11px;
+/* MEDICINE SECTION */
+div.sheet-medicine{
+	grid-area: medicine;
+	margin-left: 14px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 75px;
+	width: 600px;
 }
 
-div.sheet-stealth input{
-	text-align: center;
-	width: 10px;
-	font-size: 20px;
-	font-weight: 600;
-	margin-left: 55px;
-}
+/* ALCHEMY SECTION */
 
-div.sheet-stealth button{
-	font-size: 10px;
-	border: none;
-	background-color: inherit;
-	font-weight: 600;
-	background-image: none;
-}
-
-div.sheet-stealth button[type=roll]::before{
-	display:none;
-}
-
-div.sheet-stealth button:hover{
-	color: red;
-}
-
-/* TINKERING SECTION */
-
-div.sheet-tinkering{
-	grid-area: tinkering;
+div.sheet-alchemy{
+	grid-area: alchemy;
 	margin-left: 22px;
 	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
 	background-size: contain;
@@ -1150,50 +1065,152 @@ div.sheet-tinkering{
 	width: 600px;
 }
 
-div.sheet-tinkering div.sheet-section-small{
+/* TINKERING SECTION */
 
+div.sheet-tinkering{
+	grid-area: tinkering;
+	margin-left: 30px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 75px;
+	width: 600px;
 }
 
-div.sheet-tinkering label{
+/* ELECTRONICS SECTION */
+
+div.sheet-electronics{
+	grid-area: electronics;
+	margin-left: 14px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 75px;
+	width: 600px;
+}
+
+/* HACKING SECTION */
+
+div.sheet-hacking{
+	grid-area: hacking;
+	margin-left: 22px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 75px;
+	width: 600px;
+}
+
+/* METALWORKING SECTION */
+
+div.sheet-metalworking{
+	grid-area: metalworking;
+	margin-left: 30px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 75px;
+	width: 600px;
+}
+
+/* CARPENTRY SECTION */
+
+div.sheet-carpentry{
+	grid-area: carpentry;
+	margin-left: 14px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 75px;
+	width: 600px;
+}
+
+/* LEATHERWORKING SECTION */
+
+div.sheet-leatherworking{
+	grid-area: leatherworking;
+	margin-left: 22px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 75px;
+	width: 600px;
+}
+
+/* WEAVING SECTION */
+
+div.sheet-weaving{
+	grid-area: weaving;
+	margin-left: 30px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 75px;
+	width: 600px;
+}
+
+/* COOKING SECTION */
+
+div.sheet-cooking{
+	grid-area: cooking;
+	margin-left: 14px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 75px;
+	width: 600px;
+}
+
+/* JEWELSMITHING SECTION */
+
+div.sheet-jewelsmithing{
+	grid-area: jewelsmithing;
+	margin-left: 22px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFskillsblock.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 75px;
+	width: 600px;
+}
+
+/* Skill Slots */
+div.sheet-skillSlot label{
 	width: 85px;
 	font-size: 11px;
 }
-
-div.sheet-tinkering input{
+div.sheet-skillSlot input{
 	text-align: center;
 	width: 10px;
 	font-size: 20px;
 	font-weight: 600;
-	margin-left: 55px;
+	margin-left: 45px;
 }
-
-div.sheet-tinkering button{
+div.sheet-skillSlot button{
 	font-size: 10px;
 	border: none;
 	background-color: inherit;
 	font-weight: 600;
 	background-image: none;
 }
-
-div.sheet-tinkering button[type=roll]::before{
+div.sheet-skillSlot button[type=roll]::before{
 	display:none;
 }
-
-div.sheet-tinkering button:hover{
+div.sheet-skillSlot button:hover{
 	color: red;
 }
+div.sheet-skillStatOne label{
+	margin-bottom: -7px;
+	margin-left: 40px;
+}
+div.sheet-skillStatTwo label{
+	margin-top: -8px;
+	margin-left: 40px;
+}
+div.sheet-skillMod input{
+	margin-left: -5px;
+}
 
-div.sheet-stat1tinkering label{
-	margin-bottom: -5px;
-	margin-left: 40px;
-}
-div.sheet-stat2tinkering label{
-	margin-top: -5px;
-	margin-left: 40px;
-}
-div.sheet-tinkeringmod input{
-	margin-left:-20px
-}
+
 /*--------------------------------*/
 /* ---- Abilities Structure ----- */
 /*--------------------------------*/
