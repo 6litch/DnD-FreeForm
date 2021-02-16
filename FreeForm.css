@@ -1,80 +1,81 @@
 /* --------- Text ------------- */
 
 span.sheet-bold{
-  font-weight: 800;
-  font-size: medium;
+	font-weight: 800;
+	font-size: medium;
 }
 
 div.sheet-main label {
-  margin: 5px 0px 5px 0px;
-  font-size: 1.1em;
+	margin: 5px 0px 5px 0px;
+	font-size: 1.1em;
 }
 
 div.sheet-settings label {
-  margin: 5px 0px 5px 0px;
-  font-size: .9em;
+	margin: 5px 0px 5px 0px;
+	font-size: .9em;
 }
 
 div.sheet-settings input {
-  font-size: .9em;
+	font-size: .9em;
 }
 /* --------- Inputs ------------- */
 
 input[type="text"] {
-  background-color: transparent;
-  border-style: none none solid none;
-  border-color: black;
+	background-color: transparent;
+	border-style: none none solid none;
+	border-color: black;
 }
 
 input[type="number"] {
-  background-color: transparent;
-  border: none;
+	background-color: transparent;
+	border: none;
+	border-width: thin;
 }
 
 textarea {
-  background-color: transparent;
-  width: 89%;
-  height: 70%;
-  margin-right: 15px;
+	background-color: transparent;
+	width: 89%;
+	height: 70%;
+	margin-right: 15px;
 }
 
 input[type="checkbox"].sheet-checkbox {
-  border-style: solid black;
-  border-radius: 0px;
+	border-style: solid black;
+	border-radius: 0px;
 }
 
 textarea:focus,
 input[type="text"]:focus,
 input[type="number"]:focus{
-  background-color: #F6CED8;
+	background-color: #F6CED8;
 }
 
 /* ------- Buttons ---------- */
 
 button[type="roll"]:not(.sheet-small){
-  color: black;
-  height: 30px;
-  width: 30px;
-  margin-left: 15px;
+	color: black;
+	height: 30px;
+	width: 30px;
+	margin-left: 15px;
 }
 
 button[type="roll"]:not(.sheet-small)::before{
-  font-size: 1.4em;
+	font-size: 1.4em;
 }
 
 /* --------- General Section Styling ------------- */
 .sheet-flex-center {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .sheet-flex-middle {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .sheet-flex-down {
-  flex-flow: column nowrap;
+	flex-flow: column nowrap;
 }
 
 .sheet-section {
@@ -87,13 +88,13 @@ button[type="roll"]:not(.sheet-small)::before{
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+	-moz-appearance: textfield;
 }
 
 /*--------------------------------*/
@@ -118,184 +119,188 @@ div.sheet-main{
 /* LOGO SECTION */
 
 div.sheet-logo{
-  grid-area: logo;
-  background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FF-Logo.png?raw=true);
-  background-size: 250px 250px;
-  background-repeat: no-repeat;
-  margin-left: 20px;
-  margin-top: 15px;
-  display: flex;
-  justify-content:flex-end;
-  align-items:flex-end;
-  flex-flow: column;
+	grid-area: logo;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FF-Logo.png?raw=true);
+	background-size: 250px 250px;
+	background-repeat: no-repeat;
+	margin-left: 20px;
+	margin-top: 15px;
+	display: flex;
+	justify-content:flex-end;
+	align-items:flex-end;
+	flex-flow: column;
 }
 div.sheet-logo span{
-  font-size: 15px;
-  background-color: white;
-  border: 2px solid black; 
+	font-size: 15px;
+	background-color: white;
+	border: 2px solid black; 
 }
 
 /* NAME SECTION */
 
 div.sheet-name{
-  grid-area: name;
-  padding-top: 35px;
+	grid-area: name;
+	padding-top: 35px;
 }
 
 div.sheet-name div.sheet-section-small{
-  background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/BoxOne.jpg?raw=true);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 50px;
-  width: 290px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/BoxOne.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 50px;
+	width: 290px;
 }
 
 div.sheet-name label{
-  width: 50px;
-  padding-left: 15px;
+	width: 50px;
+	padding-left: 15px;
 }
 
 div.sheet-name input{
-  width: 180px;
+	width: 180px;
 }
 
 /* LVL SECTION */
 
 div.sheet-lvl{
-  grid-area: lvl;
-  padding-top: 35px;
+	grid-area: lvl;
+	padding-top: 35px;
 }
 
 div.sheet-lvl div.sheet-section-small{
-  background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/BoxTwo.jpg?raw=true);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 50px;
-  width: 290px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/BoxTwo.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 50px;
+	width: 290px;
 }
 
 div.sheet-lvl label{
-  width: 50px;
-  padding-left: 15px;
+	width: 50px;
+	padding-left: 15px;
 }
 
 div.sheet-lvl input{
-  width: 180px;
+	width: 180px;
+	border-style: none none solid none;
 }
 
 
 /* HP SECTION */
 
 div.sheet-hp{
-  grid-area: hp;
-  padding-top: 35px;
+	grid-area: hp;
+	padding-top: 35px;
 }
 
 div.sheet-hp div.sheet-section-small{
-  background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/BoxOne.jpg?raw=true);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 50px;
-  width: 290px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/BoxOne.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 50px;
+	width: 290px;
 }
 
 div.sheet-hp label{
-  width: 20px;
-  padding-left: 15px;
+	width: 20px;
+	padding-left: 15px;
 }
 
 div.sheet-hp input{
-  width: 180px;
+	width: 180px;
+	border-style: none none solid none;
 }
 
 /* STA SECTION */
 
 div.sheet-sta{
-  grid-area: sta;
-  padding-top: 35px;
+	grid-area: sta;
+	padding-top: 35px;
 }
 
 div.sheet-sta div.sheet-section-small{
-  background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/BoxThree.jpg?raw=true);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 50px;
-  width: 290px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/BoxThree.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 50px;
+	width: 290px;
 }
 
 div.sheet-sta label{
-  width: 20px;
-  padding-left: 15px;
+	width: 20px;
+	padding-left: 15px;
 }
 
-div.sheet-sat input{
-  width: 180px;
+div.sheet-sta input{
+	width: 180px;
+	border-style: none none solid none;
 }
 
 /* AC SECTION */
 
 div.sheet-ac{
-  grid-area: ac;
-  padding-top: 35px;
+	grid-area: ac;
+	padding-top: 35px;
 }
 
 div.sheet-ac div.sheet-section-small{
-  background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/BoxThree.jpg?raw=true);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 50px;
-  width: 290px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/BoxThree.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 50px;
+	width: 290px;
 }
 
 div.sheet-ac label{
-  width: 40px;
-  padding-left: 15px;
+	width: 40px;
+	padding-left: 15px;
 }
 
 div.sheet-ac input{
-  width: 180px;
+	width: 180px;
+	border-style: none none solid none;
 }
 
 /* QUIRK SECTION */
 
 div.sheet-quirk{
-  grid-area: quirk;
-  padding-top: 35px;
+	grid-area: quirk;
+	padding-top: 35px;
 }
 
 div.sheet-quirk div.sheet-section-small{
-  background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/BoxOne.jpg?raw=true);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 50px;
-  width: 290px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/BoxOne.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 50px;
+	width: 290px;
 }
 
 div.sheet-quirk label{
-  width: 50px;
-  padding-left: 15px;
+	width: 50px;
+	padding-left: 15px;
 }
 
 div.sheet-quirk input{
-  width: 180px;
+	width: 180px;
 }
 
 /* BUTTONS SECTION */
 
 div.sheet-buttons{
-  grid-area: buttons;
-  padding-top: 35px;
-  padding-left: 95px;
+	grid-area: buttons;
+	padding-top: 35px;
+	padding-left: 95px;
 }
 
 div.sheet-buttons div.sheet-section-small{
-  height: 50px;
-  width: 290px;
+	height: 50px;
+	width: 290px;
 }
 
 div.sheet-buttons label{
-  width: 50px;
-  padding-left: 15px;
+	width: 50px;
+	padding-left: 15px;
 }
 
 div.sheet-buttons button{
@@ -303,7 +308,7 @@ div.sheet-buttons button{
 }
 
 div.sheet-buttons input{
-  width: 180px;
+	width: 180px;
 }
 
 .sheet-charButton,
@@ -329,17 +334,17 @@ div.sheet-buttons input{
 /* BUTTONS BACKGROUND SECTION */
 
 div.sheet-bbackground{
-  grid-area: buttons;
-  padding-top: 35px;
-  padding-left: 30px;
+	grid-area: buttons;
+	padding-top: 35px;
+	padding-left: 30px;
 }
 
 div.sheet-bbackground div.sheet-section-small{
-  background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/BoxFour.jpg?raw=true);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 50px;
-  width: 600px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/BoxFour.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 50px;
+	width: 600px;
 }
 
 /* TAB CONTROL */
@@ -900,11 +905,11 @@ div.sheet-wit button:hover{
 
 div.sheet-initiative{
 	grid-area: initiative;
-	margin-left: 15px;
+	margin-left: 55px;
 }
 
 div.sheet-initiative div.sheet-section-small{
-	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockTinkering.jpg?raw=true);
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFinibloc.jpg?raw=true);
 	background-size: contain;
 	background-repeat: no-repeat;
 	height: 70px;
@@ -1276,20 +1281,34 @@ div.sheet-notes textarea{
 /* ----- Setting Structure ------ */
 /*--------------------------------*/
 
-div.sheet-settings{
+div.sheet-settingsarea{
 	display:grid;
 	grid-template-columns: 140px 140px 290px 230px;
 	grid-template-rows: 50px	50px	50px	100px;
-	grid-template-areas:"";
+	grid-template-areas:"forceMelee				forceStrength"
+						"forceRanged			forceConsitution"
+						"forceStealth			forcePerception"
+						"forceMedicine			forceMovement"
+						"forceAlchemy			forceWit"
+						"forceTinkering			forceFinesse"
+						"forceElectronics		forceControl"
+						"forceHacking			forceCharm"
+						"forceMetalworking		forceTerror"
+						"forceCarpentry			forceIntellect"
+						"forceLeatherworking	none"
+						"forceWeaving			none"
+						"forceCooking			none"
+						"forceJewelsmithing		none";
 	grid-gap: 6px;
 }
-
-
-
-
-
-
-
+div.sheet-forceMelee{
+	grid-area:forceMelee;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFinibloc.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 50px;
+	width: 200px;
+}
 
 
 
