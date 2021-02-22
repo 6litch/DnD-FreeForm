@@ -373,15 +373,15 @@ div.sheet-bbackground div.sheet-section-small{
 
 div.sheet-stats{
 	display:grid;
-	grid-template-columns: 260px 260px 80px;
+	grid-template-columns: 270px 260px 80px;
 	grid-template-rows: 75px	75px	75px	75px;
 	grid-template-areas:"strength	consitution	initiative"
 						"perception	movement	money"
-						"wit		finesse		money"
-						"control	charm		exslot"
-						"terror		intellect	exslot"
-						"income		move		exslot"
-						"wanted		renown		tol";
+						"terror		wit			money"
+						"control	charm		exslot1"
+						"finesse	intellect	exslot2"
+						"wanted		move		exslot3"
+						"renown		income		tol";
 	grid-gap: 6px;
 }
 
@@ -994,6 +994,126 @@ div.sheet-plat{
 	margin-left: 15px;
 }
 
+/* WANTED SECTION */
+div.sheet-wanted{
+	grid-area: wanted;
+	margin-left: 15px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFinibloc.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 600px;
+}
+div.sheet-wanted label{
+	width: 65px;
+	font-size: 15px;
+	margin-left: 15px;
+	margin-top: 22px;
+}
+div.sheet-wanted input{
+	text-align: center;
+	width: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 40px;
+	margin-top: 22px;
+}
+
+/* MOVEMENT SECTION */
+div.sheet-move{
+	grid-area: move;
+	margin-left: 15px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockBlank.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 600px;
+}
+div.sheet-move label{
+	width: 65px;
+	font-size: 15px;
+	margin-left: 15px;
+	margin-top: 22px;
+}
+div.sheet-move input{
+	text-align: center;
+	width: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 40px;
+	margin-top: 22px;
+}
+div.sheet-movementfly input{
+	margin-left: 0px;
+}
+div.sheet-minimovement label{
+	margin-top: -8px;
+	font-size: 10px;
+}
+div.sheet-walking label{
+	margin-left: 145px;
+}
+div.sheet-altwalking label{
+	margin-left: 8px;
+}
+
+/*extra slots*/
+div.sheet-extraBlock{
+	margin-left: 15px;
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFstatblockBlank.jpg?raw=true);
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 600px;
+}
+div.sheet-extraBlock input{
+	width: 65px;
+	font-size: 15px;
+	margin-left: 15px;
+	margin-top: 22px;
+	border: none;
+}
+div.sheet-extraBlockmin input{
+	text-align: center;
+	width: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: -6px;
+	margin-top: 22px;
+}
+div.sheet-extraBlockmin label{
+	margin-left: 150px;
+}
+div.sheet-extraBlockmax input{
+	text-align: center;
+	width: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 2px;
+	margin-top: 22px;
+}
+div.sheet-extraBlockmax label{
+	margin-left: 40px;
+}
+div.sheet-miniexslot1 label{
+	margin-top: -8px;
+	font-size: 10px;
+}
+div.sheet-exslot1{
+	grid-area:exslot1;
+}
+div.sheet-exslot2{
+	grid-area:exslot2;
+}
+div.sheet-exslot3{
+	grid-area:exslot3;
+}
+
+
+
+
+
+
 
 /*--------------------------------*/
 /* ------ Skills Structure ------ */
@@ -1283,39 +1403,121 @@ div.sheet-notes textarea{
 
 div.sheet-settingsarea{
 	display:grid;
-	grid-template-columns: 140px 140px 290px 230px;
-	grid-template-rows: 50px	50px	50px	100px;
-	grid-template-areas:"forceMelee				forceStrength"
-						"forceRanged			forceConsitution"
-						"forceStealth			forcePerception"
-						"forceMedicine			forceMovement"
-						"forceAlchemy			forceWit"
-						"forceTinkering			forceFinesse"
-						"forceElectronics		forceControl"
-						"forceHacking			forceCharm"
-						"forceMetalworking		forceTerror"
-						"forceCarpentry			forceIntellect"
-						"forceLeatherworking	none"
-						"forceWeaving			none"
-						"forceCooking			none"
-						"forceJewelsmithing		none";
+	margin-left: 20px;
+	grid-template-columns: 200px 200px 290px 230px;
+	grid-template-rows: 32px	32px	32px	32px	32px	32px	32px	32px	32px	32px	32px	32px	32px;
+	grid-template-areas:"forceMelee				forceStrength		forceInitiative"
+						"forceRanged			forceConsitution	none2"
+						"forceStealth			forcePerception		none2"
+						"forceMedicine			forceMovement		none2"
+						"forceAlchemy			forceWit			none2"
+						"forceTinkering			forceFinesse		none2"
+						"forceElectronics		forceControl		none2"
+						"forceHacking			forceCharm			none2"
+						"forceMetalworking		forceTerror			none2"
+						"forceCarpentry			forceIntellect		none2"
+						"forceLeatherworking	none1				none2"
+						"forceWeaving			none1				none2"
+						"forceCooking			none1				none2"
+						"forceJewelsmithing		none1				none2";
 	grid-gap: 6px;
 }
-div.sheet-forceMelee{
-	grid-area:forceMelee;
-	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFinibloc.jpg?raw=true);
+div.sheet-block{
+	background-image: url(https://github.com/6litch/DnD-FreeForm/blob/master/images/FFsettingsblockBlank.jpg?raw=true);
 	background-size: contain;
 	background-repeat: no-repeat;
 	height: 50px;
 	width: 200px;
 }
+div.sheet-settingsarea label{
+	margin-left: 8px;
+	margin-top: -2px;
+}
+div.sheet-settingsarea input{
+	text-align: center;
+	width: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 20px;
+	margin-top: -2px;
+}
+div.sheet-forceMelee{
+	grid-area:forceMelee;
+}
+div.sheet-forceRanged{
+	grid-area:forceRanged;
+}
+div.sheet-forceStealth{
+	grid-area:forceStealth;
+}
+div.sheet-forceMedicine{
+	grid-area:forceMedicine;
+}
+div.sheet-forceAlchemy{
+	grid-area:forceAlchemy;
+}
+div.sheet-forceTinkering{
+	grid-area:forceTinkering;
+}
+div.sheet-forceElectronics{
+	grid-area:forceElectronics;
+}
+div.sheet-forceHacking{
+	grid-area:forceHacking;
+}
+div.sheet-forceMetalworking{
+	grid-area:forceMetalworking;
+}
+div.sheet-forceCarpentry{
+	grid-area:forceCarpentry;
+}
+div.sheet-forceLeatherworking{
+	grid-area:forceLeatherworking;
+}
+div.sheet-forceWeaving{
+	grid-area:forceWeaving;
+}
+div.sheet-forceCooking{
+	grid-area:forceCooking;
+}
+div.sheet-forceJewelsmithing{
+	grid-area:forceJewelsmithing;
+}
 
+div.sheet-forceStrength{
+	grid-area:forceStrength;
+}
+div.sheet-forceConsitution{
+	grid-area:forceConsitution;
+}
+div.sheet-forcePerception{
+	grid-area:forcePerception;
+}
+div.sheet-forceMovement{
+	grid-area:forceMovement;
+}
+div.sheet-forceWit{
+	grid-area:forceWit;
+}
+div.sheet-forceFinesse{
+	grid-area:forceFinesse;
+}
+div.sheet-forceControl{
+	grid-area:forceControl;
+}
+div.sheet-forceCharm{
+	grid-area:forceCharm;
+}
+div.sheet-forceTerror{
+	grid-area:forceTerror;
+}
+div.sheet-forceIntellect{
+	grid-area:forceIntellect;
+}
 
-
-
-
-
-
+div.sheet-forceInitiative{
+	grid-area:forceInitiative;
+}
 
 
 
